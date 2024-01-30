@@ -90,11 +90,28 @@
     </div>
 </body>
 <script>
-    let btn =  document.querySelector['#btn']
-    let sidebar = document.querySelector['.sidebar']
+    let btn =  document.querySelector('#btn')
+    let sidebar = document.querySelector('.sidebar')
 
-    btn.onclick = function () {
-        sidebar.classlist.toggle('active')
-    };
+    if (btn !== null && sidebar !== null) {
+        // console.log(btn);
+        // console.log(sidebar)
+
+        btn.addEventListener('click', e =>{
+            e.preventDefault()
+
+            sidebar.classList.toggle('active')
+        })
+    }
+
+
+
+    // function toggleBar() {
+    //     sidebar.classList.toggle('active')
+    // }
+
+    // btn.onclick = function () {
+    //     sidebar.classlist.toggle('active')
+    // };
 </script>
 </html>
